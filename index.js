@@ -27,7 +27,6 @@ module.exports = function (data, file) {
     workers.push(worker);
 
     let c = chunks[i];
-
     worker.send({
       data: c,
       jobId: i

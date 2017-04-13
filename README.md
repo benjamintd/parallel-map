@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/benjamintd/parallel-map.svg?branch=master)](https://travis-ci.org/benjamintd/parallel-map)
+
 # Parallel Map
 
 A map function that runs on all of your CPU cores, for Node.js.
@@ -32,3 +34,5 @@ module.exports = function (x) {
   return x * x;
 }
 ```
+
+Note that there is an overhead to forking multiple processes to have them run in parallel, so there will only be a performance gain when the function to execute requires a lot of CPU time.

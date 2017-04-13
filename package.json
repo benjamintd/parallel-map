@@ -1,10 +1,11 @@
 {
   "name": "parallel-map",
   "version": "0.0.1",
-  "description": "Just like Array#map, but runs in parallel on all your CPU cores.",
+  "description": "An Array#map function that runs in parallel on all your CPU cores.",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/*.test.js"
+    "test": "eslint *.js test/*.js && tap test/*.test.js",
+    "bench": "node test/*.bench.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +14,6 @@
     "lodash.flatten": "^4.4.0"
   },
   "devDependencies": {
-    "benchmark": "^2.1.4",
     "eslint": "^3.13.1",
     "eslint-config-mourner": "^2.0.1",
     "tap": "^10.3.2"
